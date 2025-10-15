@@ -1,0 +1,13 @@
+#Ignore virtual environemnt
+.myenv/
+
+#Ignore cache files
+__pycache__/
+
+
+README.md
+input.md
+
+
+#Ignore commits
+.git
