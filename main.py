@@ -3,6 +3,7 @@ from tools import pdf_endpoint
 from tools import presentation_endpoint
 from tools import doc_endpoint
 app = FastAPI()
+#Adding the endpoints to the main app
 
 
 app.include_router(pdf_endpoint.router, prefix="/api/utility-service/pdf", tags=["PDF"])
