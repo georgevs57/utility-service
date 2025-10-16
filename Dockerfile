@@ -15,6 +15,7 @@ RUN apt-get update \
 		python3-dev \
 		meson \
 		ninja-build \
+		pandoc \
 	&& rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
