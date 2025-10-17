@@ -15,9 +15,9 @@ app.add_middleware(
 )
 
 
-app.include_router(pdf_endpoint.router, prefix="/api/utility-service/pdf/generate", tags=["PDF"])
-app.include_router(presentation_endpoint.pptx_router, prefix="/api/utility-service/pptx/generate", tags=["PPTX"])
-app.include_router(doc_endpoint.docx_router, prefix="/api/utility-service/docx/generate", tags=["DOCX"])
+app.include_router(pdf_endpoint.router, prefix="/api/utility-service/pdf/generate-pdf", tags=["PDF"])
+app.include_router(presentation_endpoint.pptx_router, prefix="/api/utility-service/pptx/generate-pptx", tags=["PPTX"])
+app.include_router(doc_endpoint.docx_router, prefix="/api/utility-service/docx/generate-docx", tags=["DOCX"])
 
 
 @app.get("/")
