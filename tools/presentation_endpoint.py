@@ -6,7 +6,7 @@ import pypandoc
 import tempfile
 import os
 
-router = APIRouter()
+pptx_router = APIRouter()
 
 class PptxRequest(BaseModel):
     
@@ -55,7 +55,7 @@ def generate_pptx(data: PptxRequest) -> BytesIO:
             os.remove(output_path)
 
 
-@router.post("/generate-pptx")
+@pptx_router.post("/")
 async def create_pptx(request: PptxRequest):
     """
     FastAPI endpoint that receives Markdown and returns a PPTX presentation.

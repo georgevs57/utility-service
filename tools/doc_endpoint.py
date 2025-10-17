@@ -8,7 +8,7 @@ import pypandoc
 from io import BytesIO
 import os
 
-router = APIRouter()
+docx_router = APIRouter()
 
 class DocxRequest(BaseModel):
     page_size: str = "A4"
@@ -50,7 +50,7 @@ def generate_docx(data: DocxRequest) -> BytesIO:
     buffer.seek(0)
     return buffer
 
-@router.post("/generate")
+@docx_router.post("/")
 async def create_docx(request: DocxRequest):
     try:
         buffer = generate_docx(request)

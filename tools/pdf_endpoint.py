@@ -14,7 +14,7 @@ class PDFRequest(BaseModel):
     filename: str = "generated.pdf"
     content: str = ""
 
-@router.post("/generate-pdf")
+@router.post("/")
 async def generate_pdf(request: PDFRequest):
     try:
         # 1️⃣ Convert Markdown to HTML
